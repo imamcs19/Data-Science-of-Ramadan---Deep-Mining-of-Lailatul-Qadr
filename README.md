@@ -7,8 +7,7 @@ Authors:
 
 ![Data Science of “Ramadan”: Deep Mining of Lailatul Qadr](https://github.com/imamcs19/Data-Science-of-Ramadan---Deep-Mining-of-Lailatul-Qadr/blob/master/Data%20Science%20of%20Ramadan.png)
 
-Sumber tanda Lailatul Qadar: https://islam.nu.or.id/post/read/13854/kapan-lailatul-qadar 
-Umat Islam hanya ditunjukkan tanda-tanda kehadirannya. Di antara tanda-tanda datangnya Lailatul Qadar adalah: 
+Umat Islam hanya ditunjukkan tanda-tanda kehadirannya. Di antara tanda-tanda datangnya Lailatul Qadar adalah ( https://islam.nu.or.id/post/read/13854/kapan-lailatul-qadar ): 
 1. Pada hari itu matahari bersinar tidak terlalu panas dengan cuaca sangat sejuk, sebagaimana hadits riwayat Imam Muslim. 
 2. Pada malam harinya langit nampak bersih, tidak nampak awan sedikit pun, suasana tenang dan sunyi, tidak dingin dan tidak panas. Hal ini berdasarkan riwayat, Imam Ahmad.
 
