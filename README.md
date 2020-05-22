@@ -5,7 +5,10 @@ Authors:
 1. Imam Cholissodin (imamcs@ub.ac.id), Faculty of Computer Science (Filkom), Universitas Brawijaya (UB), Corresponding Author ✔
 2. Achmad Shampton, Pondok Pesantren Nurul Huda Salafiyah Syafi'iyah, Malang, Indonesia
 
-![Data Science of “Ramadan”: Deep Mining of Lailatul Qadr](https://github.com/imamcs19/Data-Science-of-Ramadan---Deep-Mining-of-Lailatul-Qadr/blob/master/Data%20Science%20of%20Ramadan.png)
+Presentation:
+![Data Science of “Ramadan”: Deep Mining of Lailatul Qadr v1](https://github.com/imamcs19/Data-Science-of-Ramadan---Deep-Mining-of-Lailatul-Qadr/blob/master/Data%20Science%20of%20Ramadan%20-%20Deep%20Mining%20of%20Lailatul%20Qadr.png)
+
+![Data Science of “Ramadan”: Deep Mining of Lailatul Qadr v2](https://github.com/imamcs19/Data-Science-of-Ramadan---Deep-Mining-of-Lailatul-Qadr/blob/master/Data%20Science%20of%20Ramadan.png)
 
 Umat Islam hanya ditunjukkan tanda-tanda kehadirannya. Di antara tanda-tanda datangnya Lailatul Qadar adalah ( https://islam.nu.or.id/post/read/13854/kapan-lailatul-qadar ): 
 1. Pada hari itu matahari bersinar tidak terlalu panas dengan cuaca sangat sejuk, sebagaimana hadits riwayat Imam Muslim. 
