@@ -19,4 +19,6 @@ Dalam Mu'jam at- Thabari al-Kabir disebutkan bahwa Rasulullah SAW bersabda: "Mal
 ---------------------
 Alhamdulillah, berdasarkan “Hasil rekap pengujian” Maka, In Syaa Allah suhu bumi saat Lailatul Qadr rata-rata adalah ± 19 derajat celcius, yang artinya “udara tidak dingin atau tidak panas” = ± 19ᵒ C.
 
+In Syaa Allah, if We use Sufficient Features in Quality and Quantity, We will Find that Lailatul Qadr is a Unique Day.
+
 Proving the Sign Truth of Islam with AI & Coding. Semoga Bermanfaat & Berkah. Aamiin YRA. :D
