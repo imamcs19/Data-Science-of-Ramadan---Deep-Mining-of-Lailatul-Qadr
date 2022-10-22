@@ -4,7 +4,7 @@ Data Science of “Ramadan”: Deep Mining of Lailatul Qadr (Why it’s only in 
 Authors:
 1. Imam Cholissodin (imamcs@ub.ac.id), Faculty of Computer Science (Filkom), Universitas Brawijaya (UB), Corresponding Author ✔
 2. Achmad Shampton (achsanmas@gmail.com), Pondok Pesantren Nurul Huda Salafiyah Syafi'iyah, Malang, Indonesia
-3. Arief Andy Soebroto, S.T., M.Kom. (ariefas@ub.ac.id), Faculty of Computer Science (Filkom), Universitas Brawijaya (UB)
+3. Arief Andy Soebroto (ariefas@ub.ac.id), Faculty of Computer Science (Filkom), Universitas Brawijaya (UB)
 
 
 ----------start | (2022, Using Data by API or Scraping from our System): ------------------------------
