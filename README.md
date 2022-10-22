@@ -9,7 +9,7 @@ Authors:
 
 ----------start | (2022, Using Data by API or Scraping from our System): ------------------------------
 
-Alhamdulillah, berdasarkan “Hasil rekap pengujian” Maka, In Syaa Allah suhu bumi saat Lailatul Qadr (LQ) rata-rata adalah ± 21.27 derajat celcius, yang artinya “udara tidak dingin atau tidak panas” = ± 21.27ᵒ C, yaitu pada tanggal 23 Ramadan 1443 H atau 24 April 2022. Kami mengimprovisasi dari nilai pencarian “udara tidak dingin atau tidak panas” dengan nilai batasan interval [15;25] sebagai pengembangan dari percobaan pencarian sebelumnya (sebelum tahun 2022) yang menggunakan berbagai opsi interval yaitu:
+Alhamdulillah, berdasarkan “Hasil rekap pengujian” Maka, In Syaa Allah suhu bumi saat Lailatul Qadr (LQ) rata-rata adalah ± 21.27 derajat celcius, yang artinya “udara tidak dingin atau tidak panas” = ± 21.27ᵒ C, yaitu pada tanggal 23 Ramadan 1443 H atau 24 April 2022. Kami mengimprovisasi dari nilai pencarian “udara tidak dingin atau tidak panas” dengan nilai batasan interval [15;25] sebagai kelanjutan dari percobaan pencarian sebelumnya (sebelum tahun 2022) yang menggunakan berbagai opsi interval yaitu:
 
 opsi 1 >> for ii in range(15,40): # utk loop parameter suhu ideal bumi (t)=[15;40]
 opsi 2 >> for ii in np.arange(15, 40.01, 0.01): # utk loop parameter suhu ideal bumi (t)=[15;40] dgn incrment 0.01
