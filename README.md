@@ -25,6 +25,8 @@ opsi 4 >> for ii in np.arange(19, 20, 1): # utk loop parameter suhu ideal bumi (
 ----------start | (before 2022, Using Data Form Kaggle): ------------------------------
 
 Presentation:
+![Data Science of “Ramadan”: Deep Mining of Lailatul Qadr v2 - Live Monitoring Chart to Identification Lailatul Qadr - 2023](https://raw.githubusercontent.com/imamcs19/Data-Science-of-Ramadan---Deep-Mining-of-Lailatul-Qadr/master/2023%20-%20Web%20App%20-%20Indentification%20Laylatul%20Qadr/static/etc/LQ%20Project%20v2.gif)
+
 ![Data Science of “Ramadan”: Deep Mining of Lailatul Qadr v1](https://github.com/imamcs19/Data-Science-of-Ramadan---Deep-Mining-of-Lailatul-Qadr/blob/master/Data%20Science%20of%20Ramadan%20-%20Deep%20Mining%20of%20Lailatul%20Qadr.png)
 
 ![Data Science of “Ramadan”: Deep Mining of Lailatul Qadr v2](https://github.com/imamcs19/Data-Science-of-Ramadan---Deep-Mining-of-Lailatul-Qadr/blob/master/Data%20Science%20of%20Ramadan.png)
