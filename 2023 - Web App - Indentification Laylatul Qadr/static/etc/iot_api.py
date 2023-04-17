@@ -105,7 +105,8 @@ list_kota = ['Jakarta','Los Angeles','Chicago','New York City','Toronto','São P
 
 for nama_kota in list_kota:
 
-  each_list_link='http://api.weatherapi.com/v1/current.json?key=to2181c95fd6d746e9a1331323220104099&q='+nama_kota
+  #each_list_link='http://api.weatherapi.com/v1/current.json?key=to2181c95fd6d746e9a1331323220104099&q='+nama_kota
+  each_list_link='https://api.openweathermap.org/data/2.5/weather?q='+nama_kota+'&appid=to7cdce363ecc74c5fa44be2acaa031dbc0543'
   resp=requests.get(each_list_link)
 
   #http_respone 200 means OK status
