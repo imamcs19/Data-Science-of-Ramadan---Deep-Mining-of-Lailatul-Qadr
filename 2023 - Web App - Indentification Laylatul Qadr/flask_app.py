@@ -3325,25 +3325,26 @@ def elq():
     import pytz
     import random
     import numpy as np
-    
+
     def connect_db_inside():
         import os.path
-
         BASE_DIR = os.path.dirname(os.path.abspath(__file__))
         db_path = os.path.join(BASE_DIR, "dataset_for_ramadan_2022_2023.db")
-        # with sqlite3.connect(db_path) as db:
-
         return sqlite3.connect(db_path)
 
-    #def connect_db_inside():
-    #    BASE_DIR = os.getcwd()
-    #    db_path = os.path.join(BASE_DIR, "dataset_for_ramadan_2022_2023.db")
-        ## with sqlite3.connect(db_path) as db:
-    #    return sqlite3.connect(db_path)
+    # #def connect_db_inside():
+    # #    BASE_DIR = os.getcwd()
+    # #    db_path = os.path.join(BASE_DIR, "dataset_for_ramadan_2022_2023.db")
+    #     ## with sqlite3.connect(db_path) as db:
+    # #    return sqlite3.connect(db_path)
 
-    # simpan ke db
+    # # simpan ke db
     conn = connect_db_inside()
     db = conn.cursor()
+
+    # simpan ke db
+    # conn = connect_db()
+    # db = conn.cursor()
 
     # db.execute("""CREATE TABLE IF NOT EXISTS data_suhu_dll_weather_dot_com (date DATETIME, kota TEXT, suhu_dlm_celcius TEXT, precipitation_curah_hujan_dlm_persen TEXT, humidity_kelembaban_dlm_persen TEXT, wind_angin_dlm_km_per_jam TEXT) """)
 
@@ -3378,14 +3379,22 @@ def elq():
 
     # membuat filter berdasarkan tahun
     val_tahun = '2023'
+    if(val_tahun == '2022'):
+        # tgl_ramadhan_nu = tgl_ramadhan_nu_2022
+        min_date = datetime.strptime('01-04-2022 20:08', '%d-%m-%Y %H:%M')
+        max_date = datetime.strptime('30-04-2022 20:08', '%d-%m-%Y %H:%M')
+    elif(val_tahun == '2023'):
+        # tgl_ramadhan_nu = tgl_ramadhan_nu_2023
+        min_date = datetime.strptime('23-03-2023 20:08', '%d-%m-%Y %H:%M')
+        max_date = datetime.strptime('21-04-2023 20:08', '%d-%m-%Y %H:%M')
 
     tgl_unik_init = np.unique(np.array([hasil[:-3] for hasil in data[:,0] if hasil[:-3][-5:]=='20:08' and hasil[:-9][-4:]==val_tahun] ))
 
     # min_date = datetime.strptime('01-04-2022 20:08', '%d-%m-%Y %H:%M')
     # max_date = datetime.strptime('30-04-2022 20:08', '%d-%m-%Y %H:%M')
 
-    min_date = datetime.strptime('23-03-2023 20:08', '%d-%m-%Y %H:%M')
-    max_date = datetime.strptime('21-04-2023 20:08', '%d-%m-%Y %H:%M')
+    # min_date = datetime.strptime('23-03-2023 20:08', '%d-%m-%Y %H:%M')
+    # max_date = datetime.strptime('21-04-2023 20:08', '%d-%m-%Y %H:%M')
 
     # Filter data within the given interval
     filtered_data = [d for d in tgl_unik_init if min_date <= datetime.strptime(d, '%d-%m-%Y %H:%M') <= max_date]
@@ -3411,12 +3420,18 @@ def elq():
 
     sum_data_angin = []
     # sum_counter_data_angin = []
+
+    # dari sorted_data
+    get_data_suhu = []
+
     for i in range(byk_hari):
       init_sum_data_suhu = 0.
       init_counter_data_suhu = 0
 
       init_sum_data_kelembaban = 0.
       init_sum_data_angin = 0.
+
+      get_data_suhu_init = []
       for suhu_or_kelembaban_or_angin in data:
         if(suhu_or_kelembaban_or_angin[0][:-3]==tgl_unik[i]):
           init_sum_data_suhu += float(suhu_or_kelembaban_or_angin[2])
@@ -3425,11 +3440,15 @@ def elq():
           init_sum_data_kelembaban += float(suhu_or_kelembaban_or_angin[4])
           init_sum_data_angin += float(suhu_or_kelembaban_or_angin[5])
 
+          get_data_suhu_init.append(round(float(suhu_or_kelembaban_or_angin[2]),2))
+
       sum_data_suhu.append(round(init_sum_data_suhu,2))
       sum_counter_data_suhu.append(init_counter_data_suhu)
 
       sum_data_kelembaban.append(round(init_sum_data_kelembaban,2))
       sum_data_angin.append(round(init_sum_data_angin,2))
+
+      get_data_suhu.append(get_data_suhu_init)
 
     # print(sum_data_suhu)
     # print(sum_counter_data_suhu)
@@ -3509,10 +3528,10 @@ def elq():
     # kandidat LQ, misal diambil berdasarkan dari yg memiliki var terkecil
     print("kandidat LQ, misal diambil berdasarkan dari yg memiliki var terkecil:")
     print("="*30)
-    idx_candidat = np.argmin(var_data_suhu)
-    print("idx_candidat = ", idx_candidat)
-    print("Tgl berikut sbg kandidat terjadinya LQ berdasar var terkecil = ",tgl_unik[idx_candidat][:-6],"\natau tgl",tgl_ramadhan_nu[idx_candidat], "ramadhan nu dgn mean suhu = ",mean_data_suhu[idx_candidat], " dan var suhu = ",var_data_suhu[idx_candidat])
-    print("Data suhunya: \n",raw_format_dataset_suhu[idx_candidat])
+    idx_candidat_base_min_var = np.argmin(var_data_suhu)
+    print("idx_candidat_base_min_var = ", idx_candidat_base_min_var)
+    print("Tgl berikut sbg kandidat terjadinya LQ berdasar var terkecil = ",tgl_unik[idx_candidat_base_min_var][:-6],"\natau tgl",tgl_ramadhan_nu[idx_candidat_base_min_var], "ramadhan nu dgn mean suhu = ",mean_data_suhu[idx_candidat_base_min_var], " dan var suhu = ",var_data_suhu[idx_candidat_base_min_var])
+    print("Data suhunya: \n",raw_format_dataset_suhu[idx_candidat_base_min_var])
 
     print()
 
@@ -3591,10 +3610,12 @@ def elq():
              'Lagos', 'London', 'Johannesburg', 'Kairo', 'Paris', 'Zurich', 'Istanbul', 'Moskwa', 'Dubai', \
             'Mumbai','Hong Kong','Shanghai','Singapura','Tokyo','Sydney']
 
-    hasil_prediksi = {'Hasil Final idx_candidat_vote LQ': int(idx_candidat_vote),\
-    'kota': list_kota,\
-    'Keterangan': "Tgl berikut sbg kandidat terjadinya LQ berdasar dari yg memiliki selisih terkecil antara abs( mean - suhu_tdk_dingin_tdk_panas) = " + str(tgl_unik[idx_candidat][:-6])+ " atau tgl "+ str(tgl_ramadhan_nu[idx_candidat]) + " ramadhan nu dgn mean suhu = " + str(mean_data_suhu[idx_candidat]) + " dan var suhu = " + str(var_data_suhu[idx_candidat]),\
-    'Data suhunya': list(raw_format_dataset_suhu[idx_candidat]),\
+    ket_base_vote = "Tgl berikut sbg kandidat terjadinya LQ berdasar dari yg memiliki frekuensi terbesar terkait selisih terkecil antara abs( mean - suhu_tdk_dingin_tdk_panas) = " + str(tgl_unik[idx_candidat][:-6])+ " atau tgl "+ str(tgl_ramadhan_nu[idx_candidat]) + " ramadhan nu dgn mean suhu = " + str(mean_data_suhu[idx_candidat]) + " dan var suhu = " + str(var_data_suhu[idx_candidat])
+    ket_base_min_var = "Tgl berikut sbg kandidat terjadinya LQ berdasar var terkecil = " + str(tgl_unik[idx_candidat_base_min_var][:-6]) + " atau tgl " + str(tgl_ramadhan_nu[idx_candidat_base_min_var]) + " ramadhan nu dgn mean suhu = " + str(mean_data_suhu[idx_candidat_base_min_var]) + " dan var suhu = " + str(var_data_suhu[idx_candidat_base_min_var])
+
+    hasil_prediksi = {'kota': list_kota,\
+    'get_data_suhu': get_data_suhu,\
+    'hasil': { 'base_vote': {'keterangan': ket_base_vote, 'idx': int(idx_candidat_vote), 'data': list(np.round(raw_format_dataset_suhu[idx_candidat],2)) }, 'base_min_var': {'keterangan': ket_base_min_var, 'idx': int(idx_candidat_base_min_var), 'data': list(np.round(raw_format_dataset_suhu[idx_candidat_base_min_var],2))}},\
     'x':x_plot,'y1':y1_as_mean_plot,'y2':y2_as_var_plot,'date':dates_list_plot}
 
     return jsonify(hasil_prediksi)
@@ -3872,7 +3893,7 @@ def elq_plot():
                         }
                     };
                     const layout2 = {
-                        title: 'Real-Time Plot LQ (update tiap 1 detik)',
+                        title: 'Real-Time Plot LQ (auto update tiap 1 x sehari & auto run cek / get data tiap detik)',
                         xaxis: {
                             title: 'X = Date/Month/Year (i-th Day)'
                         },
