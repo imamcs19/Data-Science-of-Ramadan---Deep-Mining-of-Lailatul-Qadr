@@ -44,4 +44,6 @@ Dalam Mu'jam at- Thabari al-Kabir disebutkan bahwa Rasulullah SAW bersabda: "Mal
 
 In Syaa Allah, if We use Sufficient Features in Quality and Quantity, We will Find that Lailatul Qadr is a Unique Day.
 
+Dan In Syaa Allah, mudah-mudahan dengan AI menjadi jalan hidayah Anda mengenal pada Tuhan yang maha Esa yang sebenarnya (Allah SWT) | And In Syaa Allah, hopefully AI will be a way of guidance for you to know the true Almighty God (Allah SWT)
+
 Proving the Sign Truth of Islam with AI & Coding. Semoga Bermanfaat & Berkah. Aamiin YRA. :D
